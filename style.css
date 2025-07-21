@@ -1,0 +1,428 @@
+/* Modern Minimalist Design System */
+:root {
+    /* Colors */
+    --color-white: #ffffff;
+    --color-grey-50: #f9fafb;
+    --color-grey-100: #f3f4f6;
+    --color-grey-200: #e5e7eb;
+    --color-grey-300: #d1d5db;
+    --color-grey-400: #9ca3af;
+    --color-grey-500: #6b7280;
+    --color-grey-600: #4b5563;
+    --color-grey-700: #374151;
+    --color-grey-800: #1f2937;
+    --color-grey-900: #111827;
+    
+    /* Semantic Colors */
+    --color-bg: var(--color-grey-100);
+    --color-surface: var(--color-white);
+    --color-text: var(--color-grey-900);
+    --color-text-light: var(--color-grey-500);
+    --color-border: var(--color-grey-200);
+    --color-primary: var(--color-grey-900);
+    --color-accent: var(--color-grey-800);
+
+    /* Elevation */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    padding: var(--space-8);
+}
+
+/* Layout */
+.page-wrapper {
+    display: flex;
+    gap: var(--space-8);
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Panels */
+.quotes-panel,
+.time-panel,
+.main-content {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Side Panels */
+.quotes-panel,
+.time-panel {
+    width: 380px;
+    position: sticky;
+    top: var(--space-8);
+    padding: var(--space-6);
+    height: fit-content;
+}
+
+/* Decorative Elements */
+.quotes-panel::before,
+.time-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--color-primary);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: var(--space-8);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content::after {
+    content: '';
+    position: absolute;
+    bottom: var(--space-8);
+    right: var(--space-8);
+    width: 200px;
+    height: 200px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f3f4f6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Typography */
+h1, h2 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-4);
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.subtitle {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-8);
+}
+
+/* Form Elements */
+.todo-form {
+    background: var(--color-grey-50);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.input-group {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-12);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background: var(--color-white);
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.1);
+}
+
+.input-wrapper i,
+.select-wrapper i {
+    position: absolute;
+    left: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-light);
+}
+
+/* Buttons */
+.add-btn,
+.stopwatch-btn,
+.quote-btn {
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+}
+
+.add-btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+}
+
+.add-btn:hover {
+    background: var(--color-grey-800);
+    transform: translateY(-1px);
+}
+
+/* Todo List */
+.todo-list {
+    list-style: none;
+    margin-top: var(--space-6);
+}
+
+.todo-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4) var(--space-6);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.todo-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: var(--radius-sm);
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+/* Priority Tags */
+.todo-priority {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.priority-low {
+    background: var(--color-grey-100);
+    color: var(--color-grey-700);
+}
+
+.priority-medium {
+    background: var(--color-grey-200);
+    color: var(--color-grey-800);
+}
+
+.priority-high {
+    background: var(--color-grey-300);
+    color: var(--color-grey-900);
+}
+
+/* Time Panel */
+.flip-clock {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+}
+
+.flip-card {
+    background: var(--color-grey-900);
+    color: var(--color-white);
+    width: 80px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.flip-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.separator {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-grey-400);
+    margin: 0 var(--space-2);
+    line-height: 100px;
+}
+
+/* Stopwatch */
+.stopwatch-display {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--space-6);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-grey-900);
+}
+
+.stopwatch-controls {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+}
+
+.stopwatch-btn {
+    background: var(--color-grey-100);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.stopwatch-btn:hover {
+    background: var(--color-grey-200);
+}
+
+/* Quotes */
+blockquote {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    position: relative;
+    padding-left: var(--space-6);
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -0.5rem;
+    font-size: 3rem;
+    color: var(--color-grey-300);
+    font-family: Georgia, serif;
+}
+
+cite {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--color-text-light);
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+    
+    .quotes-panel,
+    .time-panel {
+        width: 100%;
+        position: static;
+        margin-bottom: var(--space-6);
+    }
+
+    .flip-card {
+        width: 70px;
+        height: 90px;
+        line-height: 90px;
+        font-size: 3rem;
+    }
+
+    .separator {
+        font-size: 3rem;
+        line-height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: var(--space-4);
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .todo-item {
+        flex-wrap: wrap;
+    }
+    
+    .todo-actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: var(--space-3);
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(var(--space-4));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-item {
+    animation: slideIn 0.3s ease-out;
+} 
