@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Store</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#1e40af",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+      content: "\f3c2";
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Hero Section - CLASSICS -->
+    <section
+      class="w-full h-[600px] relative flex items-center justify-end overflow-hidden"
+      style="background-image: url('https://readdy.ai/api/search-image?query=modern%20fashion%20clothing%20display%20with%20blue%20and%20black%20athletic%20wear%20on%20clean%20minimalist%20background%20with%20dramatic%20lighting%20and%20contemporary%20styling&width=1920&height=1080&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;"
+    >
+      <!-- Logo -->
+      <div class="absolute top-8 left-8 z-30">
+        <span class="font-['Pacifico'] text-3xl font-bold text-white drop-shadow-lg tracking-wide">Stockers</span>
+      </div>
+      <!-- Overlay with stronger blue/black shade -->
+      <div class="absolute inset-0 bg-gradient-to-br from-black/90 via-blue-800/80 via-60% to-black/90"></div>
+      <!-- Accent Shape -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl z-10"></div>
+      <!-- Content -->
+      <div class="relative z-20 flex flex-col items-end text-right px-4 pr-0 md:pr-16 w-full max-w-2xl">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 drop-shadow-lg">
+          Discover Your Style
+        </h1>
+        <p class="text-lg md:text-2xl text-white/80 mb-10 max-w-xl">
+          Elevate your wardrobe with our curated collection of modern essentials and timeless classics.
+        </p>
+        <a href="#apparel" class="bg-white text-black px-8 py-4 text-base md:text-lg font-semibold rounded-full shadow-lg hover:bg-gray-100 transition-all">Shop New Arrivals</a>
+      </div>
+    </section>
+    <!-- Apparel Section -->
+    <section id="apparel" class="w-full py-16 bg-white">
+      <div class="px-6">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">Apparel</h2>
+          <div class="flex items-center gap-2">
+            <a href="#apparel" class="text-sm text-gray-600 hover:text-primary transition-colors">VIEW ALL</a>
+            <div class="w-4 h-4 flex items-center justify-center">
+              <i class="ri-arrow-right-line text-gray-600"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-6 overflow-x-auto pb-4">
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=gray%20knit%20beanie%20hat%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=product1&orientation=squarish" alt="Icon Cashmere Beanie" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Icon Cashmere Beanie</h3>
+            <p class="text-gray-600 text-sm mb-4">$45</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="0">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="0">Buy</button>
+            </div>
+          </div>
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=beige%20cream%20colored%20hoodie%20sweatshirt%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=product2&orientation=squarish" alt="Icon Hoodie" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Icon Hoodie</h3>
+            <p class="text-gray-600 text-sm mb-4">$85</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="1">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="1">Buy</button>
+            </div>
+          </div>
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=black%20long%20sleeve%20athletic%20shirt%20with%20blue%20accent%20details%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=product3&orientation=squarish" alt="Icon Long Sleeve" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Icon Long Sleeve</h3>
+            <p class="text-gray-600 text-sm mb-4">$65</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="2">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="2">Buy</button>
+            </div>
+          </div>
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=white%20cotton%20t-shirt%20with%20small%20logo%20detail%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=product4&orientation=squarish" alt="Classic Tee" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Classic Tee</h3>
+            <p class="text-gray-600 text-sm mb-4">$35</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="3">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="3">Buy</button>
+            </div>
+          </div>
+          <!-- New Card 1 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://shop.teamsg.in/cdn/shop/files/1_bbd385e9-0287-4326-aa16-45071834c684.jpg?v=1729150434" alt="Navy Track Pants" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Navy Track Pants</h3>
+            <p class="text-gray-600 text-sm mb-4">$70</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="4">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="4">Buy</button>
+            </div>
+          </div>
+          <!-- New Card 2 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://freakins.com/cdn/shop/products/FreakinsMenswear-02661-min.jpg?v=1750054594&width=1087" alt="Oversized Denim Jacket" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Oversized Denim Jacket</h3>
+            <p class="text-gray-600 text-sm mb-4">$120</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="5">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="5">Buy</button>
+            </div>
+          </div>
+          <!-- New Card 3 -->
+          
+          <!-- New Card 4 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/C12742s.jpg?im=Resize,width=750" alt="White Button-Up Shirt" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">White Button-Up Shirt</h3>
+            <p class="text-gray-600 text-sm mb-4">$55</p>
+            <div class="flex gap-2">
+              <button class="view-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-product="7">View</button>
+              <button class="buy-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-product="7">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Build in Style Hero -->
+    <section
+      class="w-full h-[600px] relative overflow-hidden"
+      style="background-image: url('https://readdy.ai/api/search-image?query=black%20t-shirt%20with%20blue%20accent%20stripe%20on%20vibrant%20electric%20blue%20background%20with%20modern%20typography%20and%20contemporary%20fashion%20styling&width=1920&height=1080&seq=hero2&orientation=landscape'); background-size: cover; background-position: center;"
+    >
+      <div class="absolute inset-0 bg-blue-600/90"></div>
+      <div class="relative z-10 h-full flex items-center">
+        <div class="px-6 w-full">
+          <div class="max-w-2xl">
+            <h1
+              class="text-7xl md:text-8xl font-black text-white leading-tight"
+            >
+              BUILD<br />IN STYLE
+            </h1>
+            <div class="mt-8 flex items-center gap-4">
+              <button
+                class="bg-white text-black px-8 py-4 text-sm font-medium hover:bg-gray-100 transition-colors !rounded-button whitespace-nowrap"
+              >
+                EXPLORE
+              </button>
+              <button
+                class="border border-white text-white px-8 py-4 text-sm font-medium hover:bg-white hover:text-black transition-colors !rounded-button whitespace-nowrap"
+              >
+                SHOP NOW
+              </button>
+            </div>
+            <p class="text-white/80 text-sm mt-6 max-w-md">
+              Looking for premium quality apparel that combines comfort with
+              contemporary design? Discover our latest collection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Accessories Section -->
+    <section id="accessories" class="w-full py-16 bg-white">
+      <div class="px-6">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold text-gray-900">Accessories</h2>
+          <div class="flex items-center gap-2">
+            <a href="#accessories" class="text-sm text-gray-600 hover:text-primary transition-colors">VIEW ALL</a>
+            <div class="w-4 h-4 flex items-center justify-center">
+              <i class="ri-arrow-right-line text-gray-600"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-6 overflow-x-auto pb-4">
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=black%20canvas%20tote%20bag%20with%20white%20logo%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=accessory1&orientation=squarish" alt="Oversized Tote Bag" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Oversized Tote Bag</h3>
+            <p class="text-gray-600 text-sm mb-4">$55</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="0">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="0">Buy</button>
+            </div>
+          </div>
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=black%20ceramic%20coffee%20mug%20with%20minimalist%20design%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=accessory2&orientation=squarish" alt="Ceramic Mug Premium" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Ceramic Mug Premium</h3>
+            <p class="text-gray-600 text-sm mb-4">$25</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="1">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="1">Buy</button>
+            </div>
+          </div>
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=blue%20and%20white%20water%20bottle%20with%20modern%20design%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=accessory3&orientation=squarish" alt="Hydration Bottle" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Hydration Bottle</h3>
+            <p class="text-gray-600 text-sm mb-4">$35</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="2">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="2">Buy</button>
+            </div>
+          </div>
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://readdy.ai/api/search-image?query=black%20leather%20wallet%20with%20minimal%20design%20on%20clean%20white%20background%20with%20soft%20lighting%20and%20minimal%20styling%20for%20fashion%20ecommerce&width=320&height=320&seq=accessory4&orientation=squarish" alt="Leather Wallet" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Leather Wallet</h3>
+            <p class="text-gray-600 text-sm mb-4">$75</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="3">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="3">Buy</button>
+            </div>
+          </div>
+          <!-- New Accessory Card 1 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://www.jackjones.in/cdn/shop/files/276796906_g0.jpg?v=1745335607" alt="Cotton Baseball Cap" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Cotton Baseball Cap</h3>
+            <p class="text-gray-600 text-sm mb-4">$30</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="4">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="4">Buy</button>
+            </div>
+          </div>
+          <!-- New Accessory Card 2 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/25253182/2023/9/29/e4df63df-6626-498b-aab4-b09903aa05831695991036074RoadsterMenVeganLeatherBelt2.jpg" alt="Leather Belt" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Leather Belt</h3>
+            <p class="text-gray-600 text-sm mb-4">$60</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="5">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="5">Buy</button>
+            </div>
+          </div>
+          <!-- New Accessory Card 3 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-AI455954371002_lifestyle?$rl_4x5_pdp$" alt="Wool Scarf" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Wool Scarf</h3>
+            <p class="text-gray-600 text-sm mb-4">$50</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="6">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="6">Buy</button>
+            </div>
+          </div>
+          <!-- New Accessory Card 4 -->
+          <div class="flex-shrink-0 w-80">
+            <div class="bg-gray-50 rounded-lg p-8 mb-4">
+              <img src="https://m.media-amazon.com/images/I/51EIg9me-IL._UY1100_.jpg" alt="Nylon Backpack" class="w-full h-64 object-cover object-top rounded-lg" />
+            </div>
+            <h3 class="font-medium text-gray-900 mb-1">Nylon Backpack</h3>
+            <p class="text-gray-600 text-sm mb-4">$90</p>
+            <div class="flex gap-2">
+              <button class="view-acc-btn bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="7">View</button>
+              <button class="buy-acc-btn bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs font-medium transition" data-accessory="7">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- On The Go Hero -->
+    <section
+      class="w-full h-[600px] relative overflow-hidden"
+      style="background-image: url('https://readdy.ai/api/search-image?query=black%20travel%20accessories%20and%20bags%20arranged%20dramatically%20on%20dark%20background%20with%20modern%20typography%20and%20contemporary%20lifestyle%20styling&width=1920&height=1080&seq=hero3&orientation=landscape'); background-size: cover; background-position: center;"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative z-10 h-full flex items-center justify-end">
+        <div class="px-6 w-full">
+          <div class="max-w-2xl ml-auto text-right">
+            <h1
+              class="text-7xl md:text-8xl font-black text-white leading-tight"
+            >
+              ON<br />THE<br />GO
+            </h1>
+            <div class="mt-8 flex items-center justify-end gap-4">
+              <button
+                class="border border-white text-white px-8 py-4 text-sm font-medium hover:bg-white hover:text-black transition-colors !rounded-button whitespace-nowrap"
+              >
+                EXPLORE
+              </button>
+              <button
+                class="bg-white text-black px-8 py-4 text-sm font-medium hover:bg-gray-100 transition-colors !rounded-button whitespace-nowrap"
+              >
+                SHOP NOW
+              </button>
+            </div>
+            <p class="text-white/80 text-sm mt-6 max-w-md ml-auto">
+              Essential accessories designed for the modern lifestyle. Perfect
+              companions for your daily adventures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full bg-black text-white py-12">
+      <div class="px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="font-['Pacifico'] text-xl mb-4">Stockers</h3>
+            <p class="text-gray-400 text-sm">
+              Premium fashion and lifestyle brand delivering quality products
+              for the modern consumer.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-medium mb-4">Shop</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Apparel</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >New Arrivals</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">Sale</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-4">Support</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Size Guide</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Shipping Info</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Returns</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-4">Connect</h4>
+            <div class="flex gap-4">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i
+                  class="ri-instagram-line text-gray-400 hover:text-white transition-colors"
+                ></i>
+              </div>
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i
+                  class="ri-twitter-line text-gray-400 hover:text-white transition-colors"
+                ></i>
+              </div>
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i
+                  class="ri-facebook-line text-gray-400 hover:text-white transition-colors"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+        >
+          <p>&copy; 2025 Stockers. All rights reserved.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Product Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden">
+      <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+        <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl rounded-full">&times;</button>
+        <img id="modal-img" src="" alt="Product" class="w-full h-64 object-cover object-top rounded-lg mb-4" />
+        <h3 id="modal-title" class="font-bold text-xl mb-2"></h3>
+        <p id="modal-price" class="text-gray-600 mb-4"></p>
+        <p id="modal-desc" class="text-gray-700 text-sm mb-6"></p>
+        <button id="modal-buy" class="w-full bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-sm font-medium transition">Buy Now</button>
+      </div>
+    </div>
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-3 rounded-lg shadow-lg text-sm font-medium z-50 hidden"></div>
+    <!-- Accessories Modal -->
+    <div id="accessory-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden">
+      <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+        <button id="close-acc-modal" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl rounded-full">&times;</button>
+        <img id="acc-modal-img" src="" alt="Accessory" class="w-full h-64 object-cover object-top rounded-lg mb-4" />
+        <h3 id="acc-modal-title" class="font-bold text-xl mb-2"></h3>
+        <p id="acc-modal-price" class="text-gray-600 mb-4"></p>
+        <p id="acc-modal-desc" class="text-gray-700 text-sm mb-6"></p>
+        <button id="acc-modal-buy" class="w-full bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-sm font-medium transition">Buy Now</button>
+      </div>
+    </div>
+    <!-- Accessories Toast Notification -->
+    <div id="acc-toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-3 rounded-lg shadow-lg text-sm font-medium z-50 hidden"></div>
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="fixed top-0 right-0 w-full max-w-md h-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col hidden">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <h2 class="text-lg font-bold">Your Cart</h2>
+        <button id="close-cart" class="text-2xl text-gray-400 hover:text-black rounded-full">&times;</button>
+      </div>
+      <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-4">
+        <p class="text-gray-500 text-sm" id="cart-empty">Your cart is empty.</p>
+        <!-- Cart items will be injected here -->
+      </div>
+      <div class="px-6 py-4 border-t border-gray-100">
+        <button id="checkout-btn" class="w-full bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-sm font-medium transition">Checkout</button>
+      </div>
+    </div>
+    <!-- Cart Drawer Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden">
+      <div class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 relative">
+        <button id="close-search" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl rounded-full">&times;</button>
+        <input id="search-input" type="text" placeholder="Search products..." class="w-full border border-gray-200 rounded-md px-4 py-3 mb-4 focus:outline-none focus:ring-2 focus:ring-primary text-gray-900" />
+        <div id="search-results" class="space-y-4">
+          <!-- Search results will be injected here -->
+        </div>
+      </div>
+    </div>
+    <script id="scroll-behavior">
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollContainers = document.querySelectorAll(".overflow-x-auto");
+        scrollContainers.forEach((container) => {
+          let isDown = false;
+          let startX;
+          let scrollLeft;
+          container.addEventListener("mousedown", (e) => {
+            isDown = true;
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+          });
+          container.addEventListener("mouseleave", () => {
+            isDown = false;
+          });
+          container.addEventListener("mouseup", () => {
+            isDown = false;
+          });
+          container.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+          });
+        });
+      });
+    </script>
+    <script id="smooth-scroll">
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
